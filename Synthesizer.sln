@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synthesizer", "Synthesizer.csproj", "{00AADC71-7ECA-4E98-BB24-C04B93FF3439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synthesizer.Tests", "..\Synthesizer.Tests\Synthesizer.Tests.csproj", "{82A0DD17-5AC4-44D7-95B7-16E4BE42419F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00AADC71-7ECA-4E98-BB24-C04B93FF3439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00AADC71-7ECA-4E98-BB24-C04B93FF3439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00AADC71-7ECA-4E98-BB24-C04B93FF3439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00AADC71-7ECA-4E98-BB24-C04B93FF3439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A0DD17-5AC4-44D7-95B7-16E4BE42419F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A0DD17-5AC4-44D7-95B7-16E4BE42419F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A0DD17-5AC4-44D7-95B7-16E4BE42419F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A0DD17-5AC4-44D7-95B7-16E4BE42419F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
