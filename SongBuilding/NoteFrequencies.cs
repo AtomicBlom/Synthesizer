@@ -112,4 +112,30 @@ public record struct NoteFrequency(float Frequency)
 
     //implicit conversion to Note
     public static implicit operator Note(NoteFrequency value) => new Note { Frequency = value, Retrigger = true };
+
+    public static string GetNoteFromFrequency(float frequency)
+    {
+        //convert a frequency to a note name, e.g, 440 -> A4
+        var note = (int)Math.Round(12 * Math.Log(frequency / 440.0f) / Math.Log(2) + 49);
+        var octave = (note / 12) - 1;
+        var noteIndex = note % 12;
+        var noteName = noteIndex switch
+        {
+            0 => "C ",
+            1 => "C#",
+            2 => "D ",
+            3 => "D#",
+            4 => "E ",
+            5 => "F ",
+            6 => "F#",
+            7 => "G ",
+            8 => "G#",
+            9 => "A ",
+            10 => "A#",
+            11 => "B ",
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        return $"{noteName}{octave}";
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using NAudio.Wave.SampleProviders;
 using Synthesizer.Data;
+using Synthesizer.SongBuilding;
 
 namespace Synthesizer;
 
@@ -94,7 +95,10 @@ public class SongPlayer
             for (int i = 0; i < _activeSynths.Count; i++)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.Write($"{_activeSynths[i].Frequency:0000.00} ");
+                //convert frequency to note
+                var note = NoteFrequency.GetNoteFromFrequency(_activeSynths[i].Frequency);
+
+                Console.Write($"{note} ");
                 Console.ForegroundColor = _activeSynths[i].Held ? ConsoleColor.Green : ConsoleColor.Red;
                 Console.Write("█ ");
             }
